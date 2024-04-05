@@ -1,0 +1,63 @@
+<button
+  id="sidebarToggleTop"
+  class="btn btn-link d-lg-none rounded-circle mr-2"
+  type="button"
+>
+  <fa-icon [icon]="faBars" />
+</button>
+<h4 class="ms-0 ms-lg-3 mb-0 top-title-text">
+  <fa-icon class="icon-web me-2" [icon]="faGears" [fixedWidth]="true" />
+  <app-breadcrumb />
+</h4>
+<ul class="navbar-nav ms-auto">
+  <li class="nav-item dropdown">
+    <a
+      href="#"
+      class="nav-link dropdown-toggle profile-toggle"
+      id="userDropdown"
+      role="button"
+      data-bs-toggle="dropdown"
+      data-bs-auto-close="outside"
+      aria-haspopup="true"
+      aria-expanded="false"
+    >
+      <span class="profile-text text-end pt-2">
+        <span class="me-2 d-none d-lg-block">{{ user.name }}</span>
+        <small class="me-2 small d-none d-lg-block">
+          {{ user.email }}
+        </small>
+      </span>
+      <img
+        alt="Profile Image"
+        class="img-profile rounded-circle img-active"
+        [src]="user.profileImg"
+      />
+      <span class="green-dot"></span>
+    </a>
+    <div
+      class="dropdown-menu dropdown-menu-end shadow-sm animated--grown-in wp-200"
+      aria-labelledby="userDropdown"
+    >
+      <div class="row d-flex d-lg-none">
+        <div class="col profile-text text-start pt-1 px-3">
+          <span class="fw-bold">{{ user.name }}</span>
+          <small class="small d-block">{{ user.email }}</small>
+        </div>
+      </div>
+      <div class="dropdown-divider d-block d-lg-none"></div>
+      <div class="row">
+        <div class="col">
+          <a href="#" class="dropdown-item" type="button" (click)="open()">
+            <fa-icon
+              size="sm"
+              class="mr-2"
+              [fixedWidth]="true"
+              [icon]="faUser"
+            />
+            View Profile
+          </a>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>

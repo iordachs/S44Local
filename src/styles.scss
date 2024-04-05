@@ -1,0 +1,25 @@
+// @use "./theme.scss";
+@use "./theme2.scss";
+@use "scss/sb2admin.css";
+@use "bootstrap/scss/bootstrap";
+
+$fa-font-path: "@fortawesome/fontawesome-free/webfonts";
+
+@import "@fortawesome/fontawesome-free/scss/fontawesome";
+@import "@fortawesome/fontawesome-free/scss/regular";
+@import "@fortawesome/fontawesome-free/scss/solid";
+@import "@fortawesome/fontawesome-free/scss/brands";
+
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  font-family: Inter, sans-serif;
+}
+
+/* Importing Bootstrap SCSS file. */

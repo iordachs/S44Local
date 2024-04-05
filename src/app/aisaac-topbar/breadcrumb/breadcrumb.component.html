@@ -1,0 +1,12 @@
+@for (breadcrumb of breadcrumbs$ | async; track $index) {
+  <span class="d-none d-md-inline-block" for>
+    {{ breadcrumb.label }}
+  </span>
+  @if (!$last) {
+    <fa-icon
+      class="title-angle text-gray-400"
+      [icon]="faAngleRight"
+      [fixedWidth]="true"
+    />
+  }
+}

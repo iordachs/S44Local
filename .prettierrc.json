@@ -1,0 +1,17 @@
+{
+  "htmlWhitespaceSensitivity": "ignore",
+  "plugins": [
+    "prettier-plugin-sh",
+    "prettier-plugin-css-order",
+    "prettier-plugin-organize-imports"
+  ],
+  "overrides": [
+    {
+      "files": ["*.scss", "*.css"],
+      "options": {
+        "parser": "scss",
+        "proseWrap": "never"
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+<!-- <h1 i18n>Hello, {{ title }}!</h1>
+<p i18n>The theme colors are:</p>
+<p>
+  @for (color of colors; track color; let index = $index) {
+    <button
+      mat-raised-button
+      type="button"
+      [color]="color === 'none' ? '' : color"
+    >
+      {{ color | uppercase }} {{ index }}
+    </button>
+    @if (index < colors.length - 1) {
+      &nbsp;
+    }
+  }
+</p> -->
+<app-aisaac-nav
+  [class.sidebar-toggled]="sidebarToggled === true"
+  (toggled)="onToggle($event)"
+/>
+<div class="d-flex flex-column" id="content-wrapper">
+  <div id="content">
+    <app-aisaac-topbar
+      class="navbar navbar-expand navbar-light topbar mx-0 mt-0 mb-2 m-md-2 static-top border"
+    />
+    <main class="main" style="background-color: blueviolet">
+      <router-outlet />
+    </main>
+    <footer class="footer" style="background-color: burlywood"></footer>
+  </div>
+</div>

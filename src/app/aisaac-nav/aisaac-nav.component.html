@@ -1,0 +1,87 @@
+<mat-sidenav
+  class="sidebar shadow-sidebar sidebar-light accordion"
+  opened
+  mode="side"
+  [class.toggled]="isToggled === true"
+  [class.sidebar-hvr]="isHovered === true"
+  (mouseenter)="onMouseEnter()"
+  (mouseleave)="onMouseLeave()"
+>
+  <div class="d-flex">
+    <span
+      class="sidebar-brand d-flex align-items-start justify-content-start logo-light"
+    >
+      <div class="sidebar-brand-icon toggle-btn mt-1" id="sidebarToggle">
+        <img
+          src="assets/images/logo/AIsaac-VM-logo2.svg"
+          height="50"
+          alt="AIsaac VM logo"
+        />
+      </div>
+      <div class="sidebar-brand-text mx-1 mt-1">
+        <a href="#">
+          <img
+            src="assets/images/logo/AIsaac-VM-logo.svg"
+            height="50"
+            alt="AIsaac VM logo"
+          />
+        </a>
+      </div>
+    </span>
+
+    <span
+      class="text-center d-inline align-items-end justify-content-end dot-menu"
+    >
+      <button
+        type="button"
+        class="rounded-circle dot-menu-circle toggle-btn"
+        id="sidebarToggle"
+        (click)="toggleSidebar()"
+      >
+        <i class="fa-solid fa-angles-left open-tgl"></i>
+        <i class="fa-solid fa-thumbtack hover-tgl"></i>
+      </button>
+    </span>
+  </div>
+  <ul class="navbar-nav nav-scroll mt-4">
+    @for (item of menuData; track item.id) {
+      <li class="nav-item">
+        @if (item.children) {
+          <a
+            class="nav-link collapsed"
+            data-bs-toggle="collapse"
+            aria-expanded="false"
+            [href]="'#' + (item.name | lowercase | whitespace) + '-drpdwn'"
+            [attr.aria-controls]="
+              (item.name | lowercase | whitespace) + '-drpdwn'
+            "
+          >
+            <fa-icon size="xs" [icon]="item.icon" />
+            <span>{{ item.name }}</span>
+          </a>
+          <div
+            class="collapse"
+            [id]="(item.name | lowercase | whitespace) + '-drpdwn'"
+            [attr.aria-labelledby]="
+              (item.name | lowercase | whitespace) + '-drpdwn'
+            "
+          >
+            @for (x of item.children; track x.id) {
+              <div class="py-0 collapse-inner rounded">
+                <a class="collapse-item" [href]="x.url">
+                  <fa-icon size="xs" [icon]="x.icon" />
+                  <span>{{ x.name }}</span>
+                </a>
+              </div>
+            }
+          </div>
+        } @else {
+          <a class="nav-link" [href]="item.url">
+            <fa-icon size="xs" [icon]="item.icon" />
+            <span>{{ item.name }}</span>
+          </a>
+        }
+      </li>
+    }
+  </ul>
+</mat-sidenav>

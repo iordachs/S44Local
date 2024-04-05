@@ -1,0 +1,4 @@
+/dist
+/node-modules
+.husky/_/husky.sh
+**/*.scss
