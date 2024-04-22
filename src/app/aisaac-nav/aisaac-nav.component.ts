@@ -5,6 +5,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { config } from '@fortawesome/fontawesome-svg-core';
 config.autoAddCss = false;
 
+import { RouterLink, RouterLinkActive } from '@angular/router';
 import { WhitespacePipe } from '../common/pipes/whitespace.pipe';
 import { menuItems } from './aisaac-nav.menuitems';
 @Component({
@@ -17,6 +18,8 @@ import { menuItems } from './aisaac-nav.menuitems';
     NgIf,
     LowerCasePipe,
     WhitespacePipe,
+    RouterLink,
+    RouterLinkActive,
   ],
   templateUrl: './aisaac-nav.component.html',
   styleUrl: './aisaac-nav.component.scss',
