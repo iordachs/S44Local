@@ -1,1 +1,310 @@
-<div class="modal-header">Test {{ user.name }}</div>
+<div class="modal-content">
+  <div class="modal-body view-profile">
+    <form
+      action="#"
+      id="profileForm"
+      [formGroup]="profileForm"
+      (ngSubmit)="onSubmit()"
+    >
+      <div class="row">
+        <div class="col-auto my-profile mb-2 wf-150">
+          <label for="my-profile" class="form-label">My Profile:</label>
+          <div class="uploaded-logo">
+            <div class="logo-uploaded">
+              @if (operation === "edit") {
+                <a href="javascript:void(0)" class="drag-fa-times">
+                  <fa-icon [icon]="faTimes" />
+                </a>
+              }
+              <p class="mb-0 text-center upload-logo">
+                <img
+                  alt="Profile Image"
+                  class="mb-0 img-profile rounded-circle"
+                  [src]="user.profileImg"
+                />
+              </p>
+            </div>
+            @if (operation === "edit") {
+              <div class="upload-image-sort">
+                <div class="form-group">
+                  <div class="drag-fa">
+                    <fa-icon [icon]="faImage" />
+                    <input
+                      type="file"
+                      title="Only .png / .jpeg / .svg file can be uploaded."
+                      class="form-control"
+                      accept="image/png, image/jpeg, image/svg"
+                    />
+                  </div>
+                </div>
+              </div>
+            }
+          </div>
+        </div>
+        <div class="col">
+          <div class="profile-cross">
+            <button
+              class="btn-close"
+              type="button"
+              aria-label="Close"
+              (click)="activeModal.dismiss('Exit')"
+            ></button>
+          </div>
+          <div class="edit-change-pass">
+            @if (operation === "view") {
+              <button
+                class="pro-edit btn btn-outline-primary"
+                type="button"
+                aria-label="Edit"
+                (click)="onEdit()"
+              >
+                <fa-icon [icon]="faPen" />
+              </button>
+            }
+            <button
+              class="pro-change-pass ms-2 btn btn-outline-primary"
+              type="button"
+              aria-label="Change Password"
+              (click)="onEditPass()"
+            >
+              <fa-icon [icon]="faKey" />
+            </button>
+          </div>
+        </div>
+      </div>
+      @if (operation !== "editPassword") {
+        <div class="view-profile-details">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="mb-3">
+                <label for="username" class="form-label">User Name:</label>
+                <input
+                  type="text"
+                  id="username"
+                  class="form-control"
+                  placeholder="Please enter user name"
+                  required
+                  formControlName="name"
+                />
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input
+                  type="email"
+                  id="email"
+                  class="form-control"
+                  placeholder="Please enter email"
+                  required
+                  formControlName="email"
+                />
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="mb-3">
+                <label for="role" class="form-label">Role:</label>
+                <input
+                  type="text"
+                  id="role"
+                  class="form-control"
+                  placeholder="Please enter role name"
+                  required
+                  formControlName="role"
+                />
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="mb-3">
+                <label for="mobile-no" class="form-label">Mobile Number:</label>
+                <input
+                  type="tel"
+                  id="mobile-no"
+                  class="form-control"
+                  placeholder="Please enter mobile number"
+                  required
+                  formControlName="mobileNr"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      } @else {
+        <div class="view-profile-change-pass mt-3">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="mb-3">
+                <p class="mb-2"><b>Change Password</b></p>
+                <p class="mb-2">
+                  The Password must meet all of the below requirements:
+                </p>
+                <ul class="mb-2">
+                  <li>
+                    A minimum of 8 characters and no more than 30 characters
+                  </li>
+                  <li>At least one uppercase and lowercase character</li>
+                  <li>At least one number</li>
+                  <li>
+                    At least one special character eg. &#64;#$!%^&amp;*()-_
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <form
+              action="#"
+              id="passwordForm"
+              [formGroup]="passwordForm"
+              (ngSubmit)="onSubmitPasswordChange()"
+            >
+              <div class="col-md-12">
+                <div class="mb-3">
+                  <label for="old-password" class="form-label">
+                    Old Password:
+                  </label>
+                  <input
+                    type="password"
+                    id="old-password"
+                    class="form-control"
+                    placeholder="Please enter old password"
+                    formControlName="old"
+                  />
+                </div>
+                <div
+                  *ngIf="
+                    passwordForm.controls['old']?.touched &&
+                    passwordForm.controls['old']?.invalid
+                  "
+                  class="alert alert-danger"
+                >
+                  <div
+                    *ngIf="passwordForm.controls['old']?.errors?.['required']"
+                  >
+                    Old password is required.
+                  </div>
+                  <div
+                    *ngIf="
+                      passwordForm.controls['old']?.errors?.[
+                        'invalidOldPassword'
+                      ]
+                    "
+                  >
+                    Old password is invalid.
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="mb-3">
+                  <label for="new-password" class="form-label">
+                    New Password:
+                  </label>
+                  <input
+                    type="password"
+                    id="new-password"
+                    class="form-control"
+                    placeholder="Please enter new password"
+                    formControlName="new"
+                  />
+                </div>
+                <div
+                  *ngIf="
+                    passwordForm.controls['new']?.touched &&
+                    passwordForm.controls['new']?.invalid
+                  "
+                  class="alert alert-danger"
+                >
+                  <div
+                    *ngIf="passwordForm.controls['new']?.errors?.['required']"
+                  >
+                    New password is required.
+                  </div>
+                  <div
+                    *ngIf="passwordForm.controls['new']?.errors?.['pattern']"
+                  >
+                    Wrong pattern
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="mb-3">
+                  <label for="confirm-password" class="form-label">
+                    Confirm Password:
+                  </label>
+                  <input
+                    type="password"
+                    id="confirm-password"
+                    class="form-control"
+                    placeholder="Please confirm your new password"
+                    formControlName="confirm"
+                  />
+                </div>
+                <div
+                  *ngIf="
+                    passwordForm.controls['confirm']?.touched &&
+                    passwordForm.controls['confirm']?.invalid
+                  "
+                  class="alert alert-danger"
+                >
+                  <div
+                    *ngIf="
+                      passwordForm.controls['confirm']?.errors?.['required']
+                    "
+                  >
+                    Confirm password is required.
+                  </div>
+                  <div
+                    *ngIf="
+                      passwordForm.controls['confirm']?.errors?.['pattern']
+                    "
+                  >
+                    Wrong pattern
+                  </div>
+                </div>
+                <div
+                  *ngIf="
+                    passwordForm.controls['confirm']?.valid &&
+                    passwordForm.invalid &&
+                    passwordForm.errors?.['matchingNewPasswords']
+                  "
+                  class="alert alert-danger"
+                >
+                  Passwords do not match.
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      }
+    </form>
+  </div>
+  @if (operation === "edit" || operation === "editPassword") {
+    <div class="modal-footer border-0 pt-0 edit-pro-pop">
+      <button
+        type="button"
+        class="btn btn-outline-primary wf-100 cancel-pro-edit my-0"
+        (click)="onCancel()"
+      >
+        Cancel
+      </button>
+      @if (operation === "edit") {
+        <button
+          type="submit"
+          class="btn btn-primary wf-100 my-0"
+          form="profileForm"
+          [disabled]="!profileForm.valid || !profileForm.dirty"
+        >
+          Submit
+        </button>
+      }
+      @if (operation === "editPassword") {
+        <button
+          type="submit"
+          class="btn btn-primary wf-100 my-0"
+          form="passwordForm"
+          [disabled]="!passwordForm.valid || !passwordForm.dirty"
+        >
+          Submit
+        </button>
+      }
+    </div>
+  }
+</div>

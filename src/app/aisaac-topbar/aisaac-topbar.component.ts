@@ -1,6 +1,13 @@
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import { Component, inject } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faBars, faGears, faUser } from '@fortawesome/free-solid-svg-icons';
+import {
+  faBars,
+  faGears,
+  faPen,
+  faRightFromBracket,
+  faUser,
+} from '@fortawesome/free-solid-svg-icons';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { ViewProfileModalComponent } from './view-profile-modal/view-profile-modal.component';
@@ -24,6 +31,8 @@ export class AIsaacTopbarComponent {
   faBars = faBars;
   faGears = faGears;
   faUser = faUser;
+  faPen = faPen;
+  faRightFromBracket = faRightFromBracket;
 
   user: userData = {
     name: 'Sagar Kesari',
@@ -32,12 +41,22 @@ export class AIsaacTopbarComponent {
     role: 'PARTNER_ACCOUNT_OWNER',
     mobileNr: '+91-8899887766',
   };
-
+  closeResult = '';
   private modalService = inject(NgbModal);
-  open(): void {
+  open(operation: string): void {
     const modalRef = this.modalService.open(ViewProfileModalComponent);
 
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
     modalRef.componentInstance.user = this.user;
+    modalRef.componentInstance.operation = operation;
+    modalRef.result.then(
+      (result) => {
+        Object.getOwnPropertyNames(result).map(
+          (x) => (this.user[x] = result[x]),
+        );
+      },
+      (reason) => {
+        console.log(reason);
+      },
+    );
   }
 }

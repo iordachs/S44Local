@@ -47,7 +47,12 @@
       <div class="dropdown-divider d-block d-lg-none"></div>
       <div class="row">
         <div class="col">
-          <a href="#" class="dropdown-item" type="button" (click)="open()">
+          <a
+            href="javascript:void(0);"
+            class="dropdown-item"
+            type="button"
+            (click)="open('view')"
+          >
             <fa-icon
               size="sm"
               class="mr-2"
@@ -55,6 +60,35 @@
               [icon]="faUser"
             />
             View Profile
+          </a>
+        </div>
+        <div class="col text-end">
+          <a
+            href="javascript:void(0);"
+            class="dropdown-item"
+            type="button"
+            (click)="open('edit')"
+          >
+            <fa-icon
+              size="sm"
+              class="mr-2"
+              [icon]="faPen"
+              [fixedWidth]="true"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="dropdown-divider"></div>
+      <div class="row">
+        <div class="col">
+          <a href="login.html" class="dropdown-item">
+            <fa-icon
+              size="sm"
+              class="mr-2"
+              [fixedWidth]="true"
+              [icon]="faRightFromBracket"
+            />
+            Logout
           </a>
         </div>
       </div>
