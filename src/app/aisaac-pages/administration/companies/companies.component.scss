@@ -1,0 +1,5 @@
+@import "shared";
+
+:host {
+  @include frame-scroll;
+}
