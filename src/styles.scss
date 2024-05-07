@@ -1,10 +1,7 @@
 // @use "./theme.scss";
-@use "./theme2.scss";
-@use "bootstrap/scss/bootstrap";
-@use "scss/sb2admin.css";
-
 $fa-font-path: "@fortawesome/fontawesome-free/webfonts";
 
+@import "./theme2";
 @import "@fortawesome/fontawesome-free/scss/fontawesome";
 @import "@fortawesome/fontawesome-free/scss/regular";
 @import "@fortawesome/fontawesome-free/scss/solid";

@@ -1,0 +1,31 @@
+footer.sticky-footer {
+  border-top: 1px solid rgba($gray-600, .15);
+  padding: .75rem 0;
+  flex-shrink: 0;
+  height: 2.5rem;
+  bottom: 0;
+  position: fixed;
+  width: calc(100% - 16.25rem);
+  background-color: $white;
+  // width: -webkit-fill-available;
+  @include media-breakpoint-down(lg) { width: 100%; height: 3.5rem;}
+
+  @include media-breakpoint-up(md) {.version-footer{ width: 100%;}}
+
+  @include media-breakpoint-up(lg) { .version-footer{ width: auto;}}
+
+  .copyright {
+    line-height: 1;
+    font-size: 0.8rem;
+  }
+}
+
+#wrapper .sidebar.toggled ~ #content-wrapper footer.sticky-footer {
+  width: calc(100% - 5rem) !important;
+}
+
+body.sidebar-toggled {
+  footer.sticky-footer {
+    width: 100%;
+  }
+}

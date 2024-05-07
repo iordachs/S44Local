@@ -1,0 +1,17 @@
+$fa-font-path: "@fortawesome/fontawesome-free/webfonts";
+
+@import "bootstrap/scss/bootstrap";
+// Import Custom Variables (Overrides Default Bootstrap Variables)
+@import "scss/custom/functions";
+@import "scss/custom/variables";
+// Import Custom Mixins and Components
+@import "scss/custom/mixins";
+@import "scss/custom/global";
+@import "scss/custom/utilities";
+// Custom Components
+@import "scss/custom/dropdowns";
+@import "scss/custom/navs";
+@import "scss/custom/buttons";
+@import "scss/custom/error";
+@import "scss/custom/footer";
+@import "scss/custom/tagify";

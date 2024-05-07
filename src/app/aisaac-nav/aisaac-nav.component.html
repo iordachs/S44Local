@@ -57,7 +57,7 @@
               (item.name | lowercase | whitespace) + '-drpdwn'
             "
           >
-            <fa-icon size="xs" [icon]="item.icon" />
+            <fa-icon [fixedWidth]="true" [icon]="item.icon" />
             <span>{{ item.name }}</span>
           </a>
           <div
@@ -75,7 +75,7 @@
                   routerLinkActive="active"
                   [routerLink]="[x.url]"
                 >
-                  <fa-icon size="xs" [icon]="x.icon" />
+                  <fa-icon [fixedWidth]="true" [icon]="x.icon" />
                   <span>{{ x.name }}</span>
                 </a>
               </div>
@@ -87,7 +87,7 @@
             routerLinkActive="active"
             [routerLink]="[item.url]"
           >
-            <fa-icon size="xs" [icon]="item.icon" />
+            <fa-icon [fixedWidth]="true" [icon]="item.icon" />
             <span>{{ item.name }}</span>
           </a>
         }

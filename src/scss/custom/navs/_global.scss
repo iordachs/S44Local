@@ -1,0 +1,72 @@
+// Global styles for both custom sidebar and topbar compoments
+
+.sidebar,
+.topbar {
+  .nav-item {
+    // Customize Dropdown Arrows for Navbar
+    &.dropdown {
+      .dropdown-toggle {
+        &::after {
+          width: 1rem;
+          text-align: center;
+          float: right;
+          vertical-align: 0;
+          border: 0;
+          font-weight: 900;
+          content: '\f105';
+          font-family: 'Font Awesome 6 Free';
+        }
+      }
+
+      &.show {
+        .dropdown-toggle::after {
+          content: '\f107';
+        }
+      }
+    }
+    // Counter for nav links and nav link image sizing
+    .nav-link { 
+      position: relative;
+
+      .badge-counter {
+        position: absolute;
+        transform: scale(0.7);
+        transform-origin: top right;
+        right: 0.70rem;
+        margin-top: -0.8rem;
+        background-color: $danger;
+        min-width: 18px;
+        height: 18px;
+        padding: 2px 0;
+        font-size: 0.75rem;
+        border-radius: 20px;
+        line-height: .6rem;
+      }
+
+      .profile-text {
+        span{font-weight:800; line-height: $font-size-base - .30rem;}
+        .small {font-size: $font-size-base - .25rem; line-height: 1.35rem;}}
+
+      .img-profile {
+        height: 2.5rem;
+        width: 2.5rem;
+
+        @include media-breakpoint-down(md){height: 2rem; width: 2rem;}
+
+        &.img-active ~ .green-dot{
+          width: 10px;
+          height: 10px;
+          right: 30px;
+          margin-top: 25px;
+          position: absolute;
+          z-index: 17;
+          background-color: $success;
+          content: "";
+          border-radius: $border-radius;
+
+          @include media-breakpoint-down(md){margin-top: 19px;}
+        }
+      }
+    }
+  }
+}

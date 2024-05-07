@@ -5,7 +5,45 @@
     Tree sidebar goes here
   </div>
   <div class="col-lg-9 col-xl-9 ps-2 ps-l-2">
-    <div class="card border bg-light mb-2"></div>
+    <div class="card border bg-light mb-2">
+      <div class="tab-design2 mb-0 mx-2 px-1 mt-1">
+        <div class="scroller scroller-left float-left mt-2">
+          <fa-icon [icon]="faChevronLeft" />
+        </div>
+        <div class="scroller scroller-right float-right mt-2">
+          <fa-icon [icon]="faChevronRight" />
+        </div>
+        <div class="wrapper">
+          <nav
+            #nav="ngbNav"
+            class="nav-tabs list"
+            id="nav-tab"
+            role="tablist"
+            ngbNav
+            [(activeId)]="active"
+          >
+            @for (item of companiesTabHeaders; track item) {
+              <ng-container [ngbNavItem]="item">
+                <button
+                  ngbNavLink
+                  class="nav-item nav-link"
+                  type="button"
+                  role="tab"
+                >
+                  <fa-icon [icon]="item.icon" />
+                  <span class="mx-1">{{ item.title }}</span>
+                </button>
+                <ng-template ngbNavContent>
+                  <div *ngComponentOutlet="item.template"></div>
+                </ng-template>
+              </ng-container>
+            }
+          </nav>
+        </div>
+      </div>
+
+      <div class="tab-content" id="nav-tabContent" [ngbNavOutlet]="nav"></div>
+    </div>
   </div>
 </div>
 
