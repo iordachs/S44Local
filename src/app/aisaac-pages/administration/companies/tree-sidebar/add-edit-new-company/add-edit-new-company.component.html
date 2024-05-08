@@ -1,0 +1,75 @@
+
+<h1 mat-dialog-title style="border-bottom: 1px solid gray;">Add Company / Group
+  <div style="float: right;margin-top: 2%;cursor: pointer;">
+    <mat-icon (click)="onClick()">close</mat-icon>
+  </div>
+</h1>
+<div style="display: flex;">
+  <div style="width: 30%;">
+      <div style="border: 1px solid gray;margin: 0px 10px 0px 10px; border-radius: 5px;">
+        <img src="assets/images/logo/AIsaac-VM-logo.svg" alt="Image Description" width="180px" style="margin-left: 5px;">
+      </div>
+  </div>
+  <div style="width: 70%; margin-right: 5px;">
+    <form [formGroup]="myForm">
+      <mat-form-field style="width: 100%;" appearance="outline">
+        <mat-label>Company / Group Name*</mat-label>
+        <input matInput formControlName="newGroupName" placeholder="Please enter company / group name">
+      </mat-form-field>
+
+      <div style="display: flex;">
+        <mat-form-field style="width: 50%; margin-right: 5px;" appearance="outline">
+          <mat-label>Belongs To*:</mat-label>
+          <input matInput formControlName="belongsTo" placeholder="Eviden">
+        </mat-form-field>
+        <mat-form-field style="width: 50%;" appearance="outline">
+          <mat-label>TimeZone*</mat-label>
+          <mat-select formControlName="timeZone" placeholder="Select">
+            <mat-option value="option1">GMT(+00:30)</mat-option>
+            <mat-option value="option2">GMT(+05:30)</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div style="display: flex;">
+        <mat-form-field style="width: 50%; margin-right: 5px;" appearance="outline">
+          <mat-label>Country*</mat-label>
+          <mat-select formControlName="country" placeholder="Select">
+            <mat-option value="option1">India</mat-option>
+            <mat-option value="option2">France</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field style="width: 50%;" appearance="outline">
+          <mat-label>IndustryType*</mat-label>
+          <mat-select formControlName="industryType" placeholder="Select">
+            <mat-option value="option1">IT Security</mat-option>
+            <mat-option value="option2">Tech: E-Commerce</mat-option>
+            <mat-option value="option2">Tech: Computer/Network Consultant</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <mat-checkbox formControlName="partOfGroup">Part of group</mat-checkbox>
+
+      <div style="display: flex;">
+        <mat-form-field style="width: 50%; margin-right: 5px;" appearance="outline">
+          <mat-label>GroupName*</mat-label>
+          <mat-select formControlName="groupName" placeholder="Select">
+            <mat-option value="option1">New</mat-option>
+            <mat-option value="option2">Burger King</mat-option>
+            <mat-option value="option2">Popeyes Gr</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field style="width: 50%;" appearance="outline">
+          <mat-label>New Group Name</mat-label>
+          <input matInput formControlName="newGroupName" placeholder="">
+        </mat-form-field>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div mat-dialog-actions align="end">
+  <button mat-button style="border: 1px solid blue;" mat-raised-button (click)="onClick()">Cancel</button>
+  <button mat-button color="primary" mat-raised-button cdkFocusInitial >Save</button>
+</div>
