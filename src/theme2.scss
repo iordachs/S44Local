@@ -1,6 +1,7 @@
 $fa-font-path: "@fortawesome/fontawesome-free/webfonts";
 
-@import "bootstrap/scss/bootstrap";
+// @import "bootstrap/scss/bootstrap";
+@import "scss/custom/bs-custom";
 // Import Custom Variables (Overrides Default Bootstrap Variables)
 @import "scss/custom/functions";
 @import "scss/custom/variables";

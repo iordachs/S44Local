@@ -1,0 +1,47 @@
+<div class="dropdown" ngbDropdown>
+  <button
+    id="cpy-users-more"
+    class="btn btn-outline-primary ms-2"
+    type="button"
+    ngbDropdownToggle
+  >
+    <fa-icon class="mx-1" [icon]="faEllipsisVertical" />
+  </button>
+  <ul
+    ngbDropdownMenu
+    aria-labelledby="cpy-users-more"
+    class="dropdown-menu dropdown-menu-end mt-1 shadow-sm"
+  >
+    <li>
+      <button ngbDropdownItem type="button" class="dropdown-item">
+        Enable
+      </button>
+    </li>
+    <li>
+      <button ngbDropdownItem type="button" class="dropdown-item">
+        Disable
+      </button>
+    </li>
+    <li>
+      <button ngbDropdownItem type="button" class="dropdown-item">
+        Resend Activation Link
+      </button>
+    </li>
+    <li>
+      <button ngbDropdownItem type="button" class="dropdown-item">
+        Reset Password
+      </button>
+    </li>
+    <li>
+      <button ngbDropdownItem type="button" class="dropdown-item">
+        Assign to Company
+      </button>
+    </li>
+    <div class="dropdown-divider"></div>
+    <li>
+      <button ngbDropdownItem type="button" class="dropdown-item text-danger">
+        Add New
+      </button>
+    </li>
+  </ul>
+</div>

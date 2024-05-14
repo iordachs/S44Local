@@ -1,11 +1,11 @@
-@use "./theme.scss";
+// @use "./theme.scss";
 $fa-font-path: "@fortawesome/fontawesome-free/webfonts";
 
-@import "./theme2";
 @import "@fortawesome/fontawesome-free/scss/fontawesome";
 @import "@fortawesome/fontawesome-free/scss/regular";
 @import "@fortawesome/fontawesome-free/scss/solid";
 @import "@fortawesome/fontawesome-free/scss/brands";
+@import "./theme2";
 
 /* You can add global styles to this file, and also import other style files */
 
@@ -13,9 +13,6 @@ html,
 body {
   margin: 0;
   height: 100%;
-}
-
-body {
   font-family: Inter, sans-serif;
 }
 

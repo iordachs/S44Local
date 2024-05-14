@@ -1,0 +1,26 @@
+<div class="dropdown" ngbDropdown>
+  <button
+    id="add-new-user"
+    class="btn btn-primary text-white dropdown-toggle"
+    ngbDropdownToggle
+    type="button"
+  >
+    Add New User
+  </button>
+  <ul
+    ngbDropdownMenu
+    aria-labelledby="add-new-user"
+    class="dropdown-menu dropdown-menu-end mt-1 shadow-sm"
+  >
+    <li>
+      <button ngbDropdownItem type="button" class="dropdown-item">
+        Add New
+      </button>
+    </li>
+    <li>
+      <button ngbDropdownItem type="button" class="dropdown-item">
+        Import from .csv
+      </button>
+    </li>
+  </ul>
+</div>

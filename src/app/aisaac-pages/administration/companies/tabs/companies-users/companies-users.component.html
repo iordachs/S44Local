@@ -20,16 +20,1658 @@
   </div>
   <div class="col-md-4">
     <div class="d-flex align-items-end justify-content-end mt-2 mt-md-0">
-      <div class="dropdown">
-        <button
-          id="addNewUser"
-          class="btn btn-primary text-white dropdown-toggle"
-          ngbDropdownToggle
-          type="button"
-        >
-          Add New User
-        </button>
-      </div>
+      <app-add-new-drp />
+      <app-context-drp />
+    </div>
+  </div>
+</div>
+<div class="p-0 mx-2">
+  <div class="tbl-fixed-scroll">
+    <div class="tbl-hor">
+      <table
+        id="users-table"
+        class="table table-over fixed-tbl-head first-td-fixed sec-td-fixed last-td-fixed w-100 no-wrap-td"
+      >
+        <thead>
+          <tr>
+            <th>
+              <label class="check">
+                <input type="checkbox" id="select-all-check" name="is_name" />
+                <span class="checkmark"></span>
+              </label>
+            </th>
+            <th class="sort-th astro-sort">Name</th>
+            <th class="sort-th astro-sort">User Name</th>
+            <th class="sort-th astro-sort">Role</th>
+            <th class="sort-th astro-sort">Belongs To</th>
+            <th class="sort-th astro-sort">Business Unit Access</th>
+            <th class="sort-th astro-sort">Status</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="table-srt2">
+          <tr>
+            <td>
+              <label class="check">
+                <input type="checkbox" class="all-check" name="is_name" />
+                <span class="checkmark"></span>
+              </label>
+            </td>
+            <td>Danial Pearson1</td>
+            <td>danial.pearson1&#64;eviden.net</td>
+            <td>Role_User</td>
+            <td>Eviden</td>
+            <td>All</td>
+            <td><span class="text-success">Active</span></td>
+            <td class="fa-action">
+              <ul class="fa-action-more list-inline m-0 p-0">
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    data-bs-container="body"
+                    data-bs-html="true"
+                    data-bs-trigger="focus"
+                    data-bs-toggle="popover"
+                    data-bs-placement="left"
+                    data-bs-content="
+              <div class='pop-w-400'>
+                  <div class='popover-section-scroll'>
+                  <table class='table-popover'>
+                      <tbody>
+                          <tr><td class='wf-175'><b>Mobile Number:</b></td> <td>+01 9876543210</td></tr>
+                          <tr><td><b>Factor Authentication:</b></td> <td>Enable</td></tr>
+                          <tr><td><b>Receive Message via Email:</b></td> <td>Yes</td></tr>
+                          <tr><td><b>Receive Message via SMS:</b></td> <td>Yes</td></tr>
+
+                      </tbody>
+                  </table>
+<hr class='my-2'>
+                  <p class='mb-1 small'><b>Created By:</b> Eviden (Role_User) <span class=''>Sep 23, 2023 at 21:10:50</span></p>
+<p class='mb-0 small'><b>Updated By</b> Eviden (Role_User) <span class=''>Sep 23, 2023 at 20:21:32</span></p>
+
+              </div></div>"
+                  >
+                    <svg
+                      class="svg-inline--fa fa-info"
+                      aria-hidden="true"
+                      focusable="false"
+                      data-prefix="fas"
+                      data-icon="info"
+                      role="img"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 192 512"
+                      data-fa-i2svg=""
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M160 448h-32V224c0-17.69-14.33-32-32-32L32 192c-17.67 0-32 14.31-32 32s14.33 31.1 32 31.1h32v192H32c-17.67 0-32 14.31-32 32s14.33 32 32 32h128c17.67 0 32-14.31 32-32S177.7 448 160 448zM96 128c26.51 0 48-21.49 48-48S122.5 32.01 96 32.01s-48 21.49-48 48S69.49 128 96 128z"
+                      />
+                    </svg>
+                    <!-- <i class="fas fa-info"></i> Font Awesome fontawesome.com -->
+                  </a>
+                </li>
+                <li>
+                  <span class="dropdown d-inline-block">
+                    <a
+                      href="javascript:void(0);"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <svg
+                        class="svg-inline--fa fa-ellipsis-vertical"
+                        aria-hidden="true"
+                        focusable="false"
+                        data-prefix="fas"
+                        data-icon="ellipsis-vertical"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 128 512"
+                        data-fa-i2svg=""
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M64 360C94.93 360 120 385.1 120 416C120 446.9 94.93 472 64 472C33.07 472 8 446.9 8 416C8 385.1 33.07 360 64 360zM64 200C94.93 200 120 225.1 120 256C120 286.9 94.93 312 64 312C33.07 312 8 286.9 8 256C8 225.1 33.07 200 64 200zM64 152C33.07 152 8 126.9 8 96C8 65.07 33.07 40 64 40C94.93 40 120 65.07 120 96C120 126.9 94.93 152 64 152z"
+                        />
+                      </svg>
+                      <!-- <i class="fas fa-ellipsis-vertical"></i> Font Awesome fontawesome.com -->
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          data-bs-toggle="modal"
+                          data-bs-target="#enablelogrout"
+                          href="javascript:void(0);"
+                        >
+                          Edit
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          data-bs-toggle="modal"
+                          data-bs-target="#enablelogrout"
+                          href="javascript:void(0);"
+                        >
+                          Disable
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item disabled"
+                          data-bs-toggle="modal"
+                          data-bs-target="#enablelogrout"
+                          href="javascript:void(0);"
+                        >
+                          Resend Activation Link
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Reset Password</a>
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider" />
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item text-danger"
+                          data-bs-toggle="modal"
+                          data-bs-target="#userpop"
+                          href="#"
+                        >
+                          Delete
+                        </a>
+                      </li>
+                    </ul>
+                  </span>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="check">
+                <input type="checkbox" class="all-check" name="is_name" />
+                <span class="checkmark"></span>
+              </label>
+            </td>
+            <td>John Doe2</td>
+            <td>john.doe2&#64;eviden.net</td>
+            <td>Partner_Account...</td>
+            <td>Eviden</td>
+            <td>All</td>
+            <td><span class="text-success">Active</span></td>
+            <td class="fa-action">
+              <ul class="fa-action-more list-inline m-0 p-0">
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    data-bs-container="body"
+                    data-bs-html="true"
+                    data-bs-trigger="focus"
+                    data-bs-toggle="popover"
+                    data-bs-placement="left"
+                    data-bs-content="
+                              <div class='pop-w-400'>
+                                  <div class='popover-section-scroll'>
+                                  <table class='table-popover'>
+                                      <tbody>
+                                          <tr><td class='wf-175'><b>Mobile Number:</b></td> <td>+01 9876543210</td></tr>
+                                          <tr><td><b>Factor Authentication:</b></td> <td>Enable</td></tr>
+                                          <tr><td><b>Receive Message via Email:</b></td> <td>Yes</td></tr>
+                                          <tr><td><b>Receive Message via SMS:</b></td> <td>Yes</td></tr>
+
+                                      </tbody>
+                                  </table>
+                                  <hr class='my-2'>
+                                  <p class='mb-1 small'><b>Created By:</b> Eviden (Partner_Account_Owner) <span class=''>Sep 23, 2023 at 21:10:50</span></p>
+                                  <p class='mb-0 small'><b>Updated By</b> Eviden (Partner_Account_Owner) <span class=''>Sep 23, 2023 at 20:21:32</span></p>
+
+                              </div></div>"
+                  >
+                    <svg
+                      class="svg-inline--fa fa-info"
+                      aria-hidden="true"
+                      focusable="false"
+                      data-prefix="fas"
+                      data-icon="info"
+                      role="img"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 192 512"
+                      data-fa-i2svg=""
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M160 448h-32V224c0-17.69-14.33-32-32-32L32 192c-17.67 0-32 14.31-32 32s14.33 31.1 32 31.1h32v192H32c-17.67 0-32 14.31-32 32s14.33 32 32 32h128c17.67 0 32-14.31 32-32S177.7 448 160 448zM96 128c26.51 0 48-21.49 48-48S122.5 32.01 96 32.01s-48 21.49-48 48S69.49 128 96 128z"
+                      />
+                    </svg>
+                    <!-- <i class="fas fa-info"></i> Font Awesome fontawesome.com -->
+                  </a>
+                </li>
+                <li>
+                  <span class="dropdown d-inline-block">
+                    <a
+                      href="javascript:void(0);"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <svg
+                        class="svg-inline--fa fa-ellipsis-vertical"
+                        aria-hidden="true"
+                        focusable="false"
+                        data-prefix="fas"
+                        data-icon="ellipsis-vertical"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 128 512"
+                        data-fa-i2svg=""
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M64 360C94.93 360 120 385.1 120 416C120 446.9 94.93 472 64 472C33.07 472 8 446.9 8 416C8 385.1 33.07 360 64 360zM64 200C94.93 200 120 225.1 120 256C120 286.9 94.93 312 64 312C33.07 312 8 286.9 8 256C8 225.1 33.07 200 64 200zM64 152C33.07 152 8 126.9 8 96C8 65.07 33.07 40 64 40C94.93 40 120 65.07 120 96C120 126.9 94.93 152 64 152z"
+                        />
+                      </svg>
+                      <!-- <i class="fas fa-ellipsis-vertical"></i> Font Awesome fontawesome.com -->
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          data-bs-toggle="modal"
+                          data-bs-target="#enablelogrout"
+                          href="javascript:void(0);"
+                        >
+                          Edit
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          data-bs-toggle="modal"
+                          data-bs-target="#enablelogrout"
+                          href="javascript:void(0);"
+                        >
+                          Disable
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item disabled"
+                          data-bs-toggle="modal"
+                          data-bs-target="#enablelogrout"
+                          href="javascript:void(0);"
+                        >
+                          Resend Activation Link
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Reset Password</a>
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider" />
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item text-danger"
+                          data-bs-toggle="modal"
+                          data-bs-target="#userpop"
+                          href="#"
+                        >
+                          Delete
+                        </a>
+                      </li>
+                    </ul>
+                  </span>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="check">
+                <input type="checkbox" class="all-check" name="is_name" />
+                <span class="checkmark"></span>
+              </label>
+            </td>
+            <td>Jane Dawson1</td>
+            <td>jane.dawson1&#64;eviden.net</td>
+            <td>Role_User</td>
+            <td>Eviden</td>
+            <td><a href="">2 out of 14</a></td>
+            <td><span class="text-warning">Pending Activation</span></td>
+            <td class="fa-action">
+              <ul class="fa-action-more list-inline m-0 p-0">
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    data-bs-container="body"
+                    data-bs-html="true"
+                    data-bs-trigger="focus"
+                    data-bs-toggle="popover"
+                    data-bs-placement="left"
+                    data-bs-content="
+                              <div class='pop-w-400'>
+                                  <div class='popover-section-scroll'>
+                                  <table class='table-popover'>
+                                      <tbody>
+                                          <tr><td class='wf-175'><b>Mobile Number:</b></td> <td>+01 9876543210</td></tr>
+                                          <tr><td><b>Factor Authentication:</b></td> <td>Enable</td></tr>
+                                          <tr><td><b>Receive Message via Email:</b></td> <td>Yes</td></tr>
+                                          <tr><td><b>Receive Message via SMS:</b></td> <td>Yes</td></tr>
+
+                                      </tbody>
+                                  </table>
+                                  <hr class='my-2'>
+                                  <p class='mb-1 small'><b>Created By:</b> Eviden (Role_User) <span class=''>Sep 23, 2023 at 21:10:50</span></p>
+                                  <p class='mb-0 small'><b>Updated By</b> Eviden (Role_User) <span class=''>Sep 23, 2023 at 20:21:32</span></p>
+
+                              </div></div>"
+                  >
+                    <svg
+                      class="svg-inline--fa fa-info"
+                      aria-hidden="true"
+                      focusable="false"
+                      data-prefix="fas"
+                      data-icon="info"
+                      role="img"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 192 512"
+                      data-fa-i2svg=""
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M160 448h-32V224c0-17.69-14.33-32-32-32L32 192c-17.67 0-32 14.31-32 32s14.33 31.1 32 31.1h32v192H32c-17.67 0-32 14.31-32 32s14.33 32 32 32h128c17.67 0 32-14.31 32-32S177.7 448 160 448zM96 128c26.51 0 48-21.49 48-48S122.5 32.01 96 32.01s-48 21.49-48 48S69.49 128 96 128z"
+                      />
+                    </svg>
+                    <!-- <i class="fas fa-info"></i> Font Awesome fontawesome.com -->
+                  </a>
+                </li>
+                <li>
+                  <span class="dropdown d-inline-block">
+                    <a
+                      href="javascript:void(0);"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <svg
+                        class="svg-inline--fa fa-ellipsis-vertical"
+                        aria-hidden="true"
+                        focusable="false"
+                        data-prefix="fas"
+                        data-icon="ellipsis-vertical"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 128 512"
+                        data-fa-i2svg=""
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M64 360C94.93 360 120 385.1 120 416C120 446.9 94.93 472 64 472C33.07 472 8 446.9 8 416C8 385.1 33.07 360 64 360zM64 200C94.93 200 120 225.1 120 256C120 286.9 94.93 312 64 312C33.07 312 8 286.9 8 256C8 225.1 33.07 200 64 200zM64 152C33.07 152 8 126.9 8 96C8 65.07 33.07 40 64 40C94.93 40 120 65.07 120 96C120 126.9 94.93 152 64 152z"
+                        />
+                      </svg>
+                      <!-- <i class="fas fa-ellipsis-vertical"></i> Font Awesome fontawesome.com -->
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          data-bs-toggle="modal"
+                          data-bs-target="#enablelogrout"
+                          href="javascript:void(0);"
+                        >
+                          Edit
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          data-bs-toggle="modal"
+                          data-bs-target="#enablelogrout"
+                          href="javascript:void(0);"
+                        >
+                          Disable
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          data-bs-toggle="modal"
+                          data-bs-target="#enablelogrout"
+                          href="javascript:void(0);"
+                        >
+                          Resend Activation Link
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item disabled" href="#">
+                          Reset Password
+                        </a>
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider" />
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item text-danger"
+                          data-bs-toggle="modal"
+                          data-bs-target="#userpop"
+                          href="#"
+                        >
+                          Delete
+                        </a>
+                      </li>
+                    </ul>
+                  </span>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr class="disabled">
+            <td>
+              <label class="check">
+                <input type="checkbox" name="is_name" />
+                <span class="checkmark"></span>
+              </label>
+            </td>
+            <td>Danial Pearson2</td>
+            <td>danial.pearson2&#64;eviden.net</td>
+            <td>Customer_Accoun...</td>
+            <td>Eviden</td>
+            <td><a href="">4 out of 14</a></td>
+            <td><span class="text-gray-400">Disabled</span></td>
+            <td class="fa-action"></td>
+          </tr>
+          <tr class="disabled">
+            <td>
+              <label class="check">
+                <input type="checkbox" name="is_name" />
+                <span class="checkmark"></span>
+              </label>
+            </td>
+            <td>John Doe</td>
+            <td>john.doe&#64;eviden.net</td>
+            <td>Customer_Accoun...</td>
+            <td>Eviden</td>
+            <td><a href="">4 out of 14</a></td>
+            <td><span class="text-gray-400">Disabled</span></td>
+            <td class="fa-action"></td>
+          </tr>
+          <tr>
+            <td>
+              <label class="check">
+                <input type="checkbox" class="all-check" name="is_name" />
+                <span class="checkmark"></span>
+              </label>
+            </td>
+            <td>Jane Dawson2</td>
+            <td>jane.dawson2&#64;eviden.net</td>
+            <td>Customer_Accoun...</td>
+            <td>Eviden</td>
+            <td><span class="text-danger">Denied</span></td>
+            <td><span class="text-danger">Inactive</span></td>
+            <td class="fa-action">
+              <ul class="fa-action-more list-inline m-0 p-0">
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    data-bs-container="body"
+                    data-bs-html="true"
+                    data-bs-trigger="focus"
+                    data-bs-toggle="popover"
+                    data-bs-placement="left"
+                    data-bs-content="
+                              <div class='pop-w-400'>
+                                  <div class='popover-section-scroll'>
+                                  <table class='table-popover'>
+                                      <tbody>
+                                          <tr><td class='wf-175'><b>Mobile Number:</b></td> <td>+01 9876543210</td></tr>
+                                          <tr><td><b>Factor Authentication:</b></td> <td>Enable</td></tr>
+                                          <tr><td><b>Receive Message via Email:</b></td> <td>Yes</td></tr>
+                                          <tr><td><b>Receive Message via SMS:</b></td> <td>Yes</td></tr>
+
+                                      </tbody>
+                                  </table>
+                                  <hr class='my-2'>
+                                  <p class='mb-1 small'><b>Created By:</b> Eviden (Customer_Account_Owner) <span class=''>Sep 23, 2023 at 21:10:50</span></p>
+                                  <p class='mb-0 small'><b>Updated By</b> Eviden (Customer_Account_Owner) <span class=''>Sep 23, 2023 at 20:21:32</span></p>
+
+                              </div></div>"
+                  >
+                    <svg
+                      class="svg-inline--fa fa-info"
+                      aria-hidden="true"
+                      focusable="false"
+                      data-prefix="fas"
+                      data-icon="info"
+                      role="img"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 192 512"
+                      data-fa-i2svg=""
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M160 448h-32V224c0-17.69-14.33-32-32-32L32 192c-17.67 0-32 14.31-32 32s14.33 31.1 32 31.1h32v192H32c-17.67 0-32 14.31-32 32s14.33 32 32 32h128c17.67 0 32-14.31 32-32S177.7 448 160 448zM96 128c26.51 0 48-21.49 48-48S122.5 32.01 96 32.01s-48 21.49-48 48S69.49 128 96 128z"
+                      />
+                    </svg>
+                    <!-- <i class="fas fa-info"></i> Font Awesome fontawesome.com -->
+                  </a>
+                </li>
+                <li>
+                  <span class="dropdown d-inline-block">
+                    <a
+                      href="javascript:void(0);"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <svg
+                        class="svg-inline--fa fa-ellipsis-vertical"
+                        aria-hidden="true"
+                        focusable="false"
+                        data-prefix="fas"
+                        data-icon="ellipsis-vertical"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 128 512"
+                        data-fa-i2svg=""
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M64 360C94.93 360 120 385.1 120 416C120 446.9 94.93 472 64 472C33.07 472 8 446.9 8 416C8 385.1 33.07 360 64 360zM64 200C94.93 200 120 225.1 120 256C120 286.9 94.93 312 64 312C33.07 312 8 286.9 8 256C8 225.1 33.07 200 64 200zM64 152C33.07 152 8 126.9 8 96C8 65.07 33.07 40 64 40C94.93 40 120 65.07 120 96C120 126.9 94.93 152 64 152z"
+                        />
+                      </svg>
+                      <!-- <i class="fas fa-ellipsis-vertical"></i> Font Awesome fontawesome.com -->
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          data-bs-toggle="modal"
+                          data-bs-target="#enablelogrout"
+                          href="javascript:void(0);"
+                        >
+                          Edit
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          data-bs-toggle="modal"
+                          data-bs-target="#enablelogrout"
+                          href="javascript:void(0);"
+                        >
+                          Enable
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item disabled"
+                          data-bs-toggle="modal"
+                          data-bs-target="#enablelogrout"
+                          href="javascript:void(0);"
+                        >
+                          Resend Activation Link
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Reset Password</a>
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider" />
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item text-danger"
+                          data-bs-toggle="modal"
+                          data-bs-target="#userpop"
+                          href="#"
+                        >
+                          Delete
+                        </a>
+                      </li>
+                    </ul>
+                  </span>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="check">
+                <input type="checkbox" class="all-check" name="is_name" />
+                <span class="checkmark"></span>
+              </label>
+            </td>
+            <td>Jane Dawson3</td>
+            <td>jane.dawson3&#64;eviden.net</td>
+            <td>Partner_Account...</td>
+            <td>Eviden</td>
+            <td><a href="">2 out of 14</a></td>
+            <td><span class="text-success">Active</span></td>
+            <td class="fa-action">
+              <ul class="fa-action-more list-inline m-0 p-0">
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    data-bs-container="body"
+                    data-bs-html="true"
+                    data-bs-trigger="focus"
+                    data-bs-toggle="popover"
+                    data-bs-placement="left"
+                    data-bs-content="
+                              <div class='pop-w-400'>
+                                  <div class='popover-section-scroll'>
+                                  <table class='table-popover'>
+                                      <tbody>
+                                          <tr><td class='wf-175'><b>Mobile Number:</b></td> <td>+01 9876543210</td></tr>
+                                          <tr><td><b>Factor Authentication:</b></td> <td>Enable</td></tr>
+                                          <tr><td><b>Receive Message via Email:</b></td> <td>Yes</td></tr>
+                                          <tr><td><b>Receive Message via SMS:</b></td> <td>Yes</td></tr>
+
+                                      </tbody>
+                                  </table>
+                                  <hr class='my-2'>
+                                  <p class='mb-1 small'><b>Created By:</b> Eviden (Partner_Account_Owner) <span class=''>Sep 23, 2023 at 21:10:50</span></p>
+                                  <p class='mb-0 small'><b>Updated By</b> Eviden (Partner_Account_Owner) <span class=''>Sep 23, 2023 at 20:21:32</span></p>
+
+                              </div></div>"
+                  >
+                    <svg
+                      class="svg-inline--fa fa-info"
+                      aria-hidden="true"
+                      focusable="false"
+                      data-prefix="fas"
+                      data-icon="info"
+                      role="img"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 192 512"
+                      data-fa-i2svg=""
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M160 448h-32V224c0-17.69-14.33-32-32-32L32 192c-17.67 0-32 14.31-32 32s14.33 31.1 32 31.1h32v192H32c-17.67 0-32 14.31-32 32s14.33 32 32 32h128c17.67 0 32-14.31 32-32S177.7 448 160 448zM96 128c26.51 0 48-21.49 48-48S122.5 32.01 96 32.01s-48 21.49-48 48S69.49 128 96 128z"
+                      />
+                    </svg>
+                    <!-- <i class="fas fa-info"></i> Font Awesome fontawesome.com -->
+                  </a>
+                </li>
+                <li>
+                  <span class="dropdown d-inline-block">
+                    <a
+                      href="javascript:void(0);"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <svg
+                        class="svg-inline--fa fa-ellipsis-vertical"
+                        aria-hidden="true"
+                        focusable="false"
+                        data-prefix="fas"
+                        data-icon="ellipsis-vertical"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 128 512"
+                        data-fa-i2svg=""
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M64 360C94.93 360 120 385.1 120 416C120 446.9 94.93 472 64 472C33.07 472 8 446.9 8 416C8 385.1 33.07 360 64 360zM64 200C94.93 200 120 225.1 120 256C120 286.9 94.93 312 64 312C33.07 312 8 286.9 8 256C8 225.1 33.07 200 64 200zM64 152C33.07 152 8 126.9 8 96C8 65.07 33.07 40 64 40C94.93 40 120 65.07 120 96C120 126.9 94.93 152 64 152z"
+                        />
+                      </svg>
+                      <!-- <i class="fas fa-ellipsis-vertical"></i> Font Awesome fontawesome.com -->
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          data-bs-toggle="modal"
+                          data-bs-target="#enablelogrout"
+                          href="javascript:void(0);"
+                        >
+                          Edit
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          data-bs-toggle="modal"
+                          data-bs-target="#enablelogrout"
+                          href="javascript:void(0);"
+                        >
+                          Enable
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          data-bs-toggle="modal"
+                          data-bs-target="#enablelogrout"
+                          href="javascript:void(0);"
+                        >
+                          Disable
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          data-bs-toggle="modal"
+                          data-bs-target="#enablelogrout"
+                          href="javascript:void(0);"
+                        >
+                          Resend Activation Link
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Reset Password</a>
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider" />
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item text-danger"
+                          data-bs-toggle="modal"
+                          data-bs-target="#userpop"
+                          href="#"
+                        >
+                          Delete
+                        </a>
+                      </li>
+                    </ul>
+                  </span>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="check">
+                <input type="checkbox" class="all-check" name="is_name" />
+                <span class="checkmark"></span>
+              </label>
+            </td>
+            <td>Jane Dawson4</td>
+            <td>jane.dawson4&#64;eviden.net</td>
+            <td>Partner_Account...</td>
+            <td>Eviden</td>
+            <td><a href="">2 out of 14</a></td>
+            <td><span class="text-success">Active</span></td>
+            <td class="fa-action">
+              <ul class="fa-action-more list-inline m-0 p-0">
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    data-bs-container="body"
+                    data-bs-html="true"
+                    data-bs-trigger="focus"
+                    data-bs-toggle="popover"
+                    data-bs-placement="left"
+                    data-bs-content="
+                              <div class='pop-w-400'>
+                                  <div class='popover-section-scroll'>
+                                  <table class='table-popover'>
+                                      <tbody>
+                                          <tr><td class='wf-175'><b>Mobile Number:</b></td> <td>+01 9876543210</td></tr>
+                                          <tr><td><b>Factor Authentication:</b></td> <td>Enable</td></tr>
+                                          <tr><td><b>Receive Message via Email:</b></td> <td>Yes</td></tr>
+                                          <tr><td><b>Receive Message via SMS:</b></td> <td>Yes</td></tr>
+
+                                      </tbody>
+                                  </table>
+                                  <hr class='my-2'>
+                                  <p class='mb-1 small'><b>Created By:</b> Eviden (Partner_Account_Owner) <span class=''>Sep 23, 2023 at 21:10:50</span></p>
+                                  <p class='mb-0 small'><b>Updated By</b> Eviden (Partner_Account_Owner) <span class=''>Sep 23, 2023 at 20:21:32</span></p>
+
+                              </div></div>"
+                  >
+                    <svg
+                      class="svg-inline--fa fa-info"
+                      aria-hidden="true"
+                      focusable="false"
+                      data-prefix="fas"
+                      data-icon="info"
+                      role="img"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 192 512"
+                      data-fa-i2svg=""
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M160 448h-32V224c0-17.69-14.33-32-32-32L32 192c-17.67 0-32 14.31-32 32s14.33 31.1 32 31.1h32v192H32c-17.67 0-32 14.31-32 32s14.33 32 32 32h128c17.67 0 32-14.31 32-32S177.7 448 160 448zM96 128c26.51 0 48-21.49 48-48S122.5 32.01 96 32.01s-48 21.49-48 48S69.49 128 96 128z"
+                      />
+                    </svg>
+                    <!-- <i class="fas fa-info"></i> Font Awesome fontawesome.com -->
+                  </a>
+                </li>
+                <li>
+                  <span class="dropdown d-inline-block">
+                    <a
+                      href="javascript:void(0);"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <svg
+                        class="svg-inline--fa fa-ellipsis-vertical"
+                        aria-hidden="true"
+                        focusable="false"
+                        data-prefix="fas"
+                        data-icon="ellipsis-vertical"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 128 512"
+                        data-fa-i2svg=""
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M64 360C94.93 360 120 385.1 120 416C120 446.9 94.93 472 64 472C33.07 472 8 446.9 8 416C8 385.1 33.07 360 64 360zM64 200C94.93 200 120 225.1 120 256C120 286.9 94.93 312 64 312C33.07 312 8 286.9 8 256C8 225.1 33.07 200 64 200zM64 152C33.07 152 8 126.9 8 96C8 65.07 33.07 40 64 40C94.93 40 120 65.07 120 96C120 126.9 94.93 152 64 152z"
+                        />
+                      </svg>
+                      <!-- <i class="fas fa-ellipsis-vertical"></i> Font Awesome fontawesome.com -->
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          data-bs-toggle="modal"
+                          data-bs-target="#enablelogrout"
+                          href="javascript:void(0);"
+                        >
+                          Edit
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          data-bs-toggle="modal"
+                          data-bs-target="#enablelogrout"
+                          href="javascript:void(0);"
+                        >
+                          Enable
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          data-bs-toggle="modal"
+                          data-bs-target="#enablelogrout"
+                          href="javascript:void(0);"
+                        >
+                          Disable
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          data-bs-toggle="modal"
+                          data-bs-target="#enablelogrout"
+                          href="javascript:void(0);"
+                        >
+                          Resend Activation Link
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Reset Password</a>
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider" />
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item text-danger"
+                          data-bs-toggle="modal"
+                          data-bs-target="#userpop"
+                          href="#"
+                        >
+                          Delete
+                        </a>
+                      </li>
+                    </ul>
+                  </span>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="check">
+                <input type="checkbox" class="all-check" name="is_name" />
+                <span class="checkmark"></span>
+              </label>
+            </td>
+            <td>Jane Dawson5</td>
+            <td>jane.dawson5&#64;eviden.net</td>
+            <td>Role_User</td>
+            <td>Eviden</td>
+            <td><a href="">2 out of 14</a></td>
+            <td><span class="text-warning">Pending Activation</span></td>
+            <td class="fa-action">
+              <ul class="fa-action-more list-inline m-0 p-0">
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    data-bs-container="body"
+                    data-bs-html="true"
+                    data-bs-trigger="focus"
+                    data-bs-toggle="popover"
+                    data-bs-placement="left"
+                    data-bs-content="
+                              <div class='pop-w-400'>
+                                  <div class='popover-section-scroll'>
+                                  <table class='table-popover'>
+                                      <tbody>
+                                          <tr><td class='wf-175'><b>Mobile Number:</b></td> <td>+01 9876543210</td></tr>
+                                          <tr><td><b>Factor Authentication:</b></td> <td>Enable</td></tr>
+                                          <tr><td><b>Receive Message via Email:</b></td> <td>Yes</td></tr>
+                                          <tr><td><b>Receive Message via SMS:</b></td> <td>Yes</td></tr>
+
+                                      </tbody>
+                                  </table>
+                                  <hr class='my-2'>
+                                  <p class='mb-1 small'><b>Created By:</b> Eviden (Role_User) <span class=''>Sep 23, 2023 at 21:10:50</span></p>
+                                  <p class='mb-0 small'><b>Updated By</b> Eviden (Role_User) <span class=''>Sep 23, 2023 at 20:21:32</span></p>
+
+                              </div></div>"
+                  >
+                    <svg
+                      class="svg-inline--fa fa-info"
+                      aria-hidden="true"
+                      focusable="false"
+                      data-prefix="fas"
+                      data-icon="info"
+                      role="img"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 192 512"
+                      data-fa-i2svg=""
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M160 448h-32V224c0-17.69-14.33-32-32-32L32 192c-17.67 0-32 14.31-32 32s14.33 31.1 32 31.1h32v192H32c-17.67 0-32 14.31-32 32s14.33 32 32 32h128c17.67 0 32-14.31 32-32S177.7 448 160 448zM96 128c26.51 0 48-21.49 48-48S122.5 32.01 96 32.01s-48 21.49-48 48S69.49 128 96 128z"
+                      />
+                    </svg>
+                    <!-- <i class="fas fa-info"></i> Font Awesome fontawesome.com -->
+                  </a>
+                </li>
+                <li>
+                  <span class="dropdown d-inline-block">
+                    <a
+                      href="javascript:void(0);"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <svg
+                        class="svg-inline--fa fa-ellipsis-vertical"
+                        aria-hidden="true"
+                        focusable="false"
+                        data-prefix="fas"
+                        data-icon="ellipsis-vertical"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 128 512"
+                        data-fa-i2svg=""
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M64 360C94.93 360 120 385.1 120 416C120 446.9 94.93 472 64 472C33.07 472 8 446.9 8 416C8 385.1 33.07 360 64 360zM64 200C94.93 200 120 225.1 120 256C120 286.9 94.93 312 64 312C33.07 312 8 286.9 8 256C8 225.1 33.07 200 64 200zM64 152C33.07 152 8 126.9 8 96C8 65.07 33.07 40 64 40C94.93 40 120 65.07 120 96C120 126.9 94.93 152 64 152z"
+                        />
+                      </svg>
+                      <!-- <i class="fas fa-ellipsis-vertical"></i> Font Awesome fontawesome.com -->
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          data-bs-toggle="modal"
+                          data-bs-target="#enablelogrout"
+                          href="javascript:void(0);"
+                        >
+                          Edit
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          data-bs-toggle="modal"
+                          data-bs-target="#enablelogrout"
+                          href="javascript:void(0);"
+                        >
+                          Enable
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          data-bs-toggle="modal"
+                          data-bs-target="#enablelogrout"
+                          href="javascript:void(0);"
+                        >
+                          Disable
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          data-bs-toggle="modal"
+                          data-bs-target="#enablelogrout"
+                          href="javascript:void(0);"
+                        >
+                          Resend Activation Link
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Reset Password</a>
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider" />
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item text-danger"
+                          data-bs-toggle="modal"
+                          data-bs-target="#userpop"
+                          href="#"
+                        >
+                          Delete
+                        </a>
+                      </li>
+                    </ul>
+                  </span>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="check">
+                <input type="checkbox" class="all-check" name="is_name" />
+                <span class="checkmark"></span>
+              </label>
+            </td>
+            <td>Danial Pearson2</td>
+            <td>danial.pearson2&#64;eviden.net</td>
+            <td>Role_User</td>
+            <td>Eviden</td>
+            <td>All</td>
+            <td><span class="text-success">Active</span></td>
+            <td class="fa-action">
+              <ul class="fa-action-more list-inline m-0 p-0">
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    data-bs-container="body"
+                    data-bs-html="true"
+                    data-bs-trigger="focus"
+                    data-bs-toggle="popover"
+                    data-bs-placement="left"
+                    data-bs-content="
+                              <div class='pop-w-400'>
+                                  <div class='popover-section-scroll'>
+                                  <table class='table-popover'>
+                                      <tbody>
+                                          <tr><td class='wf-175'><b>Mobile Number:</b></td> <td>+01 9876543210</td></tr>
+                                          <tr><td><b>Factor Authentication:</b></td> <td>Enable</td></tr>
+                                          <tr><td><b>Receive Message via Email:</b></td> <td>Yes</td></tr>
+                                          <tr><td><b>Receive Message via SMS:</b></td> <td>Yes</td></tr>
+
+                                      </tbody>
+                                  </table>
+                                  <hr class='my-2'>
+                                  <p class='mb-1 small'><b>Created By:</b> Eviden (Role_User) <span class=''>Sep 23, 2023 at 21:10:50</span></p>
+                                  <p class='mb-0 small'><b>Updated By</b> Eviden (Role_User) <span class=''>Sep 23, 2023 at 20:21:32</span></p>
+
+                              </div></div>"
+                  >
+                    <svg
+                      class="svg-inline--fa fa-info"
+                      aria-hidden="true"
+                      focusable="false"
+                      data-prefix="fas"
+                      data-icon="info"
+                      role="img"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 192 512"
+                      data-fa-i2svg=""
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M160 448h-32V224c0-17.69-14.33-32-32-32L32 192c-17.67 0-32 14.31-32 32s14.33 31.1 32 31.1h32v192H32c-17.67 0-32 14.31-32 32s14.33 32 32 32h128c17.67 0 32-14.31 32-32S177.7 448 160 448zM96 128c26.51 0 48-21.49 48-48S122.5 32.01 96 32.01s-48 21.49-48 48S69.49 128 96 128z"
+                      />
+                    </svg>
+                    <!-- <i class="fas fa-info"></i> Font Awesome fontawesome.com -->
+                  </a>
+                </li>
+                <li>
+                  <span class="dropdown d-inline-block">
+                    <a
+                      href="javascript:void(0);"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <svg
+                        class="svg-inline--fa fa-ellipsis-vertical"
+                        aria-hidden="true"
+                        focusable="false"
+                        data-prefix="fas"
+                        data-icon="ellipsis-vertical"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 128 512"
+                        data-fa-i2svg=""
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M64 360C94.93 360 120 385.1 120 416C120 446.9 94.93 472 64 472C33.07 472 8 446.9 8 416C8 385.1 33.07 360 64 360zM64 200C94.93 200 120 225.1 120 256C120 286.9 94.93 312 64 312C33.07 312 8 286.9 8 256C8 225.1 33.07 200 64 200zM64 152C33.07 152 8 126.9 8 96C8 65.07 33.07 40 64 40C94.93 40 120 65.07 120 96C120 126.9 94.93 152 64 152z"
+                        />
+                      </svg>
+                      <!-- <i class="fas fa-ellipsis-vertical"></i> Font Awesome fontawesome.com -->
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          data-bs-toggle="modal"
+                          data-bs-target="#enablelogrout"
+                          href="javascript:void(0);"
+                        >
+                          Edit
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          data-bs-toggle="modal"
+                          data-bs-target="#enablelogrout"
+                          href="javascript:void(0);"
+                        >
+                          Enable
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          data-bs-toggle="modal"
+                          data-bs-target="#enablelogrout"
+                          href="javascript:void(0);"
+                        >
+                          Disable
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          data-bs-toggle="modal"
+                          data-bs-target="#enablelogrout"
+                          href="javascript:void(0);"
+                        >
+                          Resend Activation Link
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Reset Password</a>
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider" />
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item text-danger"
+                          data-bs-toggle="modal"
+                          data-bs-target="#userpop"
+                          href="#"
+                        >
+                          Delete
+                        </a>
+                      </li>
+                    </ul>
+                  </span>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="check">
+                <input type="checkbox" class="all-check" name="is_name" />
+                <span class="checkmark"></span>
+              </label>
+            </td>
+            <td>Danial Pearson4</td>
+            <td>danial.pearson4&#64;eviden.net</td>
+            <td>Role_User</td>
+            <td>Eviden</td>
+            <td>All</td>
+            <td><span class="text-success">Active</span></td>
+            <td class="fa-action">
+              <ul class="fa-action-more list-inline m-0 p-0">
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    data-bs-container="body"
+                    data-bs-html="true"
+                    data-bs-trigger="focus"
+                    data-bs-toggle="popover"
+                    data-bs-placement="left"
+                    data-bs-content="
+                              <div class='pop-w-400'>
+                                  <div class='popover-section-scroll'>
+                                  <table class='table-popover'>
+                                      <tbody>
+                                          <tr><td class='wf-175'><b>Mobile Number:</b></td> <td>+01 9876543210</td></tr>
+                                          <tr><td><b>Factor Authentication:</b></td> <td>Enable</td></tr>
+                                          <tr><td><b>Receive Message via Email:</b></td> <td>Yes</td></tr>
+                                          <tr><td><b>Receive Message via SMS:</b></td> <td>Yes</td></tr>
+
+                                      </tbody>
+                                  </table>
+                                  <hr class='my-2'>
+                                  <p class='mb-1 small'><b>Created By:</b> Eviden (Role_User) <span class=''>Sep 23, 2023 at 21:10:50</span></p>
+                                  <p class='mb-0 small'><b>Updated By</b> Eviden (Role_User) <span class=''>Sep 23, 2023 at 20:21:32</span></p>
+
+                              </div></div>"
+                  >
+                    <svg
+                      class="svg-inline--fa fa-info"
+                      aria-hidden="true"
+                      focusable="false"
+                      data-prefix="fas"
+                      data-icon="info"
+                      role="img"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 192 512"
+                      data-fa-i2svg=""
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M160 448h-32V224c0-17.69-14.33-32-32-32L32 192c-17.67 0-32 14.31-32 32s14.33 31.1 32 31.1h32v192H32c-17.67 0-32 14.31-32 32s14.33 32 32 32h128c17.67 0 32-14.31 32-32S177.7 448 160 448zM96 128c26.51 0 48-21.49 48-48S122.5 32.01 96 32.01s-48 21.49-48 48S69.49 128 96 128z"
+                      />
+                    </svg>
+                    <!-- <i class="fas fa-info"></i> Font Awesome fontawesome.com -->
+                  </a>
+                </li>
+                <li>
+                  <span class="dropdown d-inline-block">
+                    <a
+                      href="javascript:void(0);"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <svg
+                        class="svg-inline--fa fa-ellipsis-vertical"
+                        aria-hidden="true"
+                        focusable="false"
+                        data-prefix="fas"
+                        data-icon="ellipsis-vertical"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 128 512"
+                        data-fa-i2svg=""
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M64 360C94.93 360 120 385.1 120 416C120 446.9 94.93 472 64 472C33.07 472 8 446.9 8 416C8 385.1 33.07 360 64 360zM64 200C94.93 200 120 225.1 120 256C120 286.9 94.93 312 64 312C33.07 312 8 286.9 8 256C8 225.1 33.07 200 64 200zM64 152C33.07 152 8 126.9 8 96C8 65.07 33.07 40 64 40C94.93 40 120 65.07 120 96C120 126.9 94.93 152 64 152z"
+                        />
+                      </svg>
+                      <!-- <i class="fas fa-ellipsis-vertical"></i> Font Awesome fontawesome.com -->
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          data-bs-toggle="modal"
+                          data-bs-target="#enablelogrout"
+                          href="javascript:void(0);"
+                        >
+                          Edit
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          data-bs-toggle="modal"
+                          data-bs-target="#enablelogrout"
+                          href="javascript:void(0);"
+                        >
+                          Enable
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          data-bs-toggle="modal"
+                          data-bs-target="#enablelogrout"
+                          href="javascript:void(0);"
+                        >
+                          Disable
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          data-bs-toggle="modal"
+                          data-bs-target="#enablelogrout"
+                          href="javascript:void(0);"
+                        >
+                          Resend Activation Link
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Reset Password</a>
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider" />
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item text-danger"
+                          data-bs-toggle="modal"
+                          data-bs-target="#userpop"
+                          href="#"
+                        >
+                          Delete
+                        </a>
+                      </li>
+                    </ul>
+                  </span>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="check">
+                <input type="checkbox" class="all-check" name="is_name" />
+                <span class="checkmark"></span>
+              </label>
+            </td>
+            <td>Danial Pearson5</td>
+            <td>danial.pearson5&#64;eviden.net</td>
+            <td>Role_User</td>
+            <td>Eviden</td>
+            <td>All</td>
+            <td><span class="text-success">Active</span></td>
+            <td class="fa-action">
+              <ul class="fa-action-more list-inline m-0 p-0">
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    data-bs-container="body"
+                    data-bs-html="true"
+                    data-bs-trigger="focus"
+                    data-bs-toggle="popover"
+                    data-bs-placement="left"
+                    data-bs-content="
+                              <div class='pop-w-400'>
+                                  <div class='popover-section-scroll'>
+                                  <table class='table-popover'>
+                                      <tbody>
+                                          <tr><td class='wf-175'><b>Mobile Number:</b></td> <td>+01 9876543210</td></tr>
+                                          <tr><td><b>Factor Authentication:</b></td> <td>Enable</td></tr>
+                                          <tr><td><b>Receive Message via Email:</b></td> <td>Yes</td></tr>
+                                          <tr><td><b>Receive Message via SMS:</b></td> <td>Yes</td></tr>
+
+                                      </tbody>
+                                  </table>
+                                  <hr class='my-2'>
+                                  <p class='mb-1 small'><b>Created By:</b> Eviden (Role_User) <span class=''>Sep 23, 2023 at 21:10:50</span></p>
+                                  <p class='mb-0 small'><b>Updated By</b> Eviden (Role_User) <span class=''>Sep 23, 2023 at 20:21:32</span></p>
+
+                              </div></div>"
+                  >
+                    <svg
+                      class="svg-inline--fa fa-info"
+                      aria-hidden="true"
+                      focusable="false"
+                      data-prefix="fas"
+                      data-icon="info"
+                      role="img"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 192 512"
+                      data-fa-i2svg=""
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M160 448h-32V224c0-17.69-14.33-32-32-32L32 192c-17.67 0-32 14.31-32 32s14.33 31.1 32 31.1h32v192H32c-17.67 0-32 14.31-32 32s14.33 32 32 32h128c17.67 0 32-14.31 32-32S177.7 448 160 448zM96 128c26.51 0 48-21.49 48-48S122.5 32.01 96 32.01s-48 21.49-48 48S69.49 128 96 128z"
+                      />
+                    </svg>
+                    <!-- <i class="fas fa-info"></i> Font Awesome fontawesome.com -->
+                  </a>
+                </li>
+                <li>
+                  <span class="dropdown d-inline-block">
+                    <a
+                      href="javascript:void(0);"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <svg
+                        class="svg-inline--fa fa-ellipsis-vertical"
+                        aria-hidden="true"
+                        focusable="false"
+                        data-prefix="fas"
+                        data-icon="ellipsis-vertical"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 128 512"
+                        data-fa-i2svg=""
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M64 360C94.93 360 120 385.1 120 416C120 446.9 94.93 472 64 472C33.07 472 8 446.9 8 416C8 385.1 33.07 360 64 360zM64 200C94.93 200 120 225.1 120 256C120 286.9 94.93 312 64 312C33.07 312 8 286.9 8 256C8 225.1 33.07 200 64 200zM64 152C33.07 152 8 126.9 8 96C8 65.07 33.07 40 64 40C94.93 40 120 65.07 120 96C120 126.9 94.93 152 64 152z"
+                        />
+                      </svg>
+                      <!-- <i class="fas fa-ellipsis-vertical"></i> Font Awesome fontawesome.com -->
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          data-bs-toggle="modal"
+                          data-bs-target="#enablelogrout"
+                          href="javascript:void(0);"
+                        >
+                          Edit
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          data-bs-toggle="modal"
+                          data-bs-target="#enablelogrout"
+                          href="javascript:void(0);"
+                        >
+                          Enable
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          data-bs-toggle="modal"
+                          data-bs-target="#enablelogrout"
+                          href="javascript:void(0);"
+                        >
+                          Disable
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          data-bs-toggle="modal"
+                          data-bs-target="#enablelogrout"
+                          href="javascript:void(0);"
+                        >
+                          Resend Activation Link
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Reset Password</a>
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider" />
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item text-danger"
+                          data-bs-toggle="modal"
+                          data-bs-target="#userpop"
+                          href="#"
+                        >
+                          Delete
+                        </a>
+                      </li>
+                    </ul>
+                  </span>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="check">
+                <input type="checkbox" class="all-check" name="is_name" />
+                <span class="checkmark"></span>
+              </label>
+            </td>
+            <td>Danial Pearson6</td>
+            <td>danial.pearson6&#64;eviden.net</td>
+            <td>Role_User</td>
+            <td>Eviden</td>
+            <td>All</td>
+            <td><span class="text-success">Active</span></td>
+            <td class="fa-action">
+              <ul class="fa-action-more list-inline m-0 p-0">
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    data-bs-container="body"
+                    data-bs-html="true"
+                    data-bs-trigger="focus"
+                    data-bs-toggle="popover"
+                    data-bs-placement="left"
+                    data-bs-content="
+                              <div class='pop-w-400'>
+                                  <div class='popover-section-scroll'>
+                                  <table class='table-popover'>
+                                      <tbody>
+                                          <tr><td class='wf-175'><b>Mobile Number:</b></td> <td>+01 9876543210</td></tr>
+                                          <tr><td><b>Factor Authentication:</b></td> <td>Enable</td></tr>
+                                          <tr><td><b>Receive Message via Email:</b></td> <td>Yes</td></tr>
+                                          <tr><td><b>Receive Message via SMS:</b></td> <td>Yes</td></tr>
+
+                                      </tbody>
+                                  </table>
+                                  <hr class='my-2'>
+                                  <p class='mb-1 small'><b>Created By:</b> Eviden (Role_User) <span class=''>Sep 23, 2023 at 21:10:50</span></p>
+                                  <p class='mb-0 small'><b>Updated By</b> Eviden (Role_User) <span class=''>Sep 23, 2023 at 20:21:32</span></p>
+
+                              </div></div>"
+                  >
+                    <svg
+                      class="svg-inline--fa fa-info"
+                      aria-hidden="true"
+                      focusable="false"
+                      data-prefix="fas"
+                      data-icon="info"
+                      role="img"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 192 512"
+                      data-fa-i2svg=""
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M160 448h-32V224c0-17.69-14.33-32-32-32L32 192c-17.67 0-32 14.31-32 32s14.33 31.1 32 31.1h32v192H32c-17.67 0-32 14.31-32 32s14.33 32 32 32h128c17.67 0 32-14.31 32-32S177.7 448 160 448zM96 128c26.51 0 48-21.49 48-48S122.5 32.01 96 32.01s-48 21.49-48 48S69.49 128 96 128z"
+                      />
+                    </svg>
+                    <!-- <i class="fas fa-info"></i> Font Awesome fontawesome.com -->
+                  </a>
+                </li>
+                <li>
+                  <span class="dropdown d-inline-block">
+                    <a
+                      href="javascript:void(0);"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <svg
+                        class="svg-inline--fa fa-ellipsis-vertical"
+                        aria-hidden="true"
+                        focusable="false"
+                        data-prefix="fas"
+                        data-icon="ellipsis-vertical"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 128 512"
+                        data-fa-i2svg=""
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M64 360C94.93 360 120 385.1 120 416C120 446.9 94.93 472 64 472C33.07 472 8 446.9 8 416C8 385.1 33.07 360 64 360zM64 200C94.93 200 120 225.1 120 256C120 286.9 94.93 312 64 312C33.07 312 8 286.9 8 256C8 225.1 33.07 200 64 200zM64 152C33.07 152 8 126.9 8 96C8 65.07 33.07 40 64 40C94.93 40 120 65.07 120 96C120 126.9 94.93 152 64 152z"
+                        />
+                      </svg>
+                      <!-- <i class="fas fa-ellipsis-vertical"></i> Font Awesome fontawesome.com -->
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          data-bs-toggle="modal"
+                          data-bs-target="#enablelogrout"
+                          href="javascript:void(0);"
+                        >
+                          Edit
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          data-bs-toggle="modal"
+                          data-bs-target="#enablelogrout"
+                          href="javascript:void(0);"
+                        >
+                          Enable
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          data-bs-toggle="modal"
+                          data-bs-target="#enablelogrout"
+                          href="javascript:void(0);"
+                        >
+                          Disable
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          data-bs-toggle="modal"
+                          data-bs-target="#enablelogrout"
+                          href="javascript:void(0);"
+                        >
+                          Resend Activation Link
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Reset Password</a>
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider" />
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item text-danger"
+                          data-bs-toggle="modal"
+                          data-bs-target="#userpop"
+                          href="#"
+                        >
+                          Delete
+                        </a>
+                      </li>
+                    </ul>
+                  </span>
+                </li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
