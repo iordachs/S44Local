@@ -1,10 +1,12 @@
-// @use "./theme.scss";
+@use "./theme.scss";
+
 $fa-font-path: "@fortawesome/fontawesome-free/webfonts";
 
 @import "@fortawesome/fontawesome-free/scss/fontawesome";
 @import "@fortawesome/fontawesome-free/scss/regular";
 @import "@fortawesome/fontawesome-free/scss/solid";
 @import "@fortawesome/fontawesome-free/scss/brands";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
 @import "./theme2";
 
 /* You can add global styles to this file, and also import other style files */

@@ -1620,6 +1620,23 @@ table {
         border-color: $gray-600;
       }
     }
+
+    &:indeterminate {
+      background-color: $white;
+
+      ~ .checkmark::after {
+        content: "";
+        display: block;
+        width: 10px;
+        height: 10px;
+        border: solid #0b57d0;
+        border-width: 2.5px 0 0;
+        position: absolute;
+        top: 6px;
+        left: 2px;
+        transform: rotate(0);
+      }
+    }
   }
 
   input:checked ~ .checkmark {

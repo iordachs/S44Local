@@ -1,0 +1,5 @@
+a[id^="cpy-user"] {
+  &::after {
+    display: none;
+  }
+}

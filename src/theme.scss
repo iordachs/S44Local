@@ -6,11 +6,11 @@ $dark-theme: mat.define-dark-theme(
   (
     color: (
       primary: mat.define-palette(mat.$blue-palette),
-      accent: mat.define-palette(mat.$blue-gray-palette),
+      accent: mat.define-palette(mat.$blue-gray-palette)
     ),
     // Only include `typography` and `density` in the default dark theme.
     typography: mat.define-typography-config(),
-    density: -2,
+    density: -2
   )
 );
 
@@ -19,13 +19,14 @@ $light-theme: mat.define-light-theme(
   (
     color: (
       primary: mat.define-palette(mat.$blue-palette),
-      accent: mat.define-palette(mat.$blue-gray-palette),
-    ),
+      accent: mat.define-palette(mat.$blue-gray-palette)
+    )
   )
 );
 
 // Apply the dark theme by default// Apply the dark theme by default
-@include mat.all-component-themes($dark-theme);
+// @include mat.all-component-themes($dark-theme);
+@include mat.all-component-colors($light-theme);
 
 // Apply the light theme only when the user prefers light themes.
 @media (prefers-color-scheme: light) {
